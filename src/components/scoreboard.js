@@ -43,7 +43,7 @@ const Scoreboard = () => {
     return (
       <div>
         <h1>Bowling Score System : {result}</h1>
-        { score.map((x) => <div key={x.round}>
+        { score.map((x) => <div style={{ border: "1px solid black", display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }} key={x.round}>
                               <h1>Round {x.round}</h1>
                               <h3>first bowl {x.firstBowlScore}</h3>
                               <h3>second bowl {x.secondBowlScore}</h3>
@@ -51,7 +51,7 @@ const Scoreboard = () => {
                                 x.thirdBowlScore ? <h3>third bowl {x.thirdBowlScore}</h3> : ''
                               }
                             </div>)}
-                          </div>
+      </div>
     );
 };
 
